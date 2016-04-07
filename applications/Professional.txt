@@ -1,0 +1,5 @@
+Hello {{employer_name}},
+This is the professional tone for my letter.
+i hope that you like it in {{employer_company}}.
+
+Thanks.
