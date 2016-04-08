@@ -449,9 +449,9 @@ body {
     font-size: 24pt;
 }
 
-.hide {
+/*.hide {
     display: none;
-}
+}*/
 
 .modal-body p {
     color: black;

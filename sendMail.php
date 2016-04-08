@@ -1,7 +1,4 @@
 <?php
-/*
-* Omerbsh.com - Omer Ben Shushan
-*/
 require "lib/phpmailer/PHPMailerAutoload.php";
 
 $mail = new PHPMailer;

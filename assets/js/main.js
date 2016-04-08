@@ -1,5 +1,5 @@
 /*
-Omerbsh.com - Omer Ben Shushan
+Omerbsh.com - Created by Omer Ben Shushan
 */
 
 /*
@@ -37,6 +37,6 @@ $( document ).ready(function() {
 		app_text = app_text.replace("{{employer_email}}", 	employerEmail);
 
 		$("#result").text( app_text );
-		$("#send_mail").css("display", "block");
+		$("#send_mail.hide").css("display", "block");
 	});
 });
