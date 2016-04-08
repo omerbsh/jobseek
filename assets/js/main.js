@@ -23,8 +23,11 @@ $( document ).ready(function() {
 
 	$( "#create" ).click(function() {
 		if(application_tone === undefined) {
-			$( ".popup-text" ).text("Please select tone for your letter.");
+			$( ".popup-text" ).html("<span style='color:red;'>Please select tone for your letter.</span>");
 			$("#myModal").modal({show: true});
+		}
+		else {
+			$("#send_mail").show();
 		}
 
 		//get form data
@@ -32,11 +35,20 @@ $( document ).ready(function() {
 		employerCompany = $( "#employer-company" ).val();
 		employerEmail 	= $( "#employer-email" ).val();
 		//replace all vars by user values
-		app_text = app_text.replace("{{employer_name}}", 	employerName);
-		app_text = app_text.replace("{{employer_company}}", employerCompany);
-		app_text = app_text.replace("{{employer_email}}", 	employerEmail);
+		app_text = app_text.replace( "{{employer_name}}", 	employerName);
+		app_text = app_text.replace( "{{employer_company}}", employerCompany);
+		app_text = app_text.replace( "{{employer_email}}", 	employerEmail);
 
-		$("#result").text( app_text );
-		$("#send_mail.hide").css("display", "block");
+		$( "#result" ).text( app_text );
+	});
+
+	$( "#send_mail" ).click(function() {
+		//send mail by post
+		$.post( "sendMail.php", { 
+			email: employerEmail, 
+			company: employerCompany,
+		 	content: mailContent 
+		 });
+		//alert success
 	});
 });

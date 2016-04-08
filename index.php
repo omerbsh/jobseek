@@ -53,7 +53,7 @@
                   <a href="#" id="create" class="btn btn-lg btn-default">Create letter</a>
                 </p>
                 <div id="result" class="result-text"></div>
-                <a href="#" id="send_mail" class="btn btn-lg btn-danger hide">Send Mail</a>
+                <a href="#" id="send_mail" class="btn btn-lg btn-danger">Send Mail</a>
               </div>
 
               <div class="mastfoot">
@@ -89,6 +89,9 @@
         <!-- Add your site or application content here -->
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+            $("#send_mail").hide();
+        </script>
         <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
